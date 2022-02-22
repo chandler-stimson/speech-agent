@@ -1,0 +1,126 @@
+body {
+  font-size: 13px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-column-gap: 5px;
+  align-items: center;
+  width: 500px;
+  background-color: #fff;
+  color: #202124;
+  margin: 0;
+}
+#visualize {
+  position: relative;
+  margin-left: 5px;
+}
+#visualize::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #e2edff;
+  display: block;
+  top: 50%;
+  left: 0;
+  position: absolute;
+}
+#visualize canvas {
+  width: 100%;
+  height: 48px;
+}
+
+#start,
+#stop {
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+#start:hover,
+#stop:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#command[data-mode="start"] {
+  fill: #4285f4;
+}
+#command[data-mode="stop"] {
+  fill: #ea4335;
+}
+#command[data-mode="start"] #stop {
+  display: none;
+}
+#command[data-mode="stop"] #start {
+  display: none;
+}
+
+svg {
+  pointer-events: none;
+}
+
+#toolbar {
+  grid-column-end: 3;
+  grid-column-start: 1;
+  display: flex;
+  align-items: flex-end;
+}
+#textarea {
+  flex: 1;
+  border: none;
+  background-color: #e2edff;
+  padding: 10px;
+  margin: 0;
+  resize: none;
+  outline: none;
+}
+#tools {
+  grid-column-end: 3;
+  grid-column-start: 1;
+  display: flex;
+  color: #888;
+  background-color: #cbdfff;
+  padding: 10px;
+  gap: 5px;
+}
+#copy {
+  border: none;
+  cursor: pointer;
+  fill: #5b5b5b;
+  background-color: transparent;
+  outline: none;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+#lang,
+#alt {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #5b5b5b;
+  cursor: pointer;
+}
+#lang {
+  flex: 1;
+}
+#alt {
+  min-width: 30px;
+}
+#notify {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #fcf8e3;
+  color: #896f3f;
+  border: solid 1px #f9ebcc;
+  padding: 5px 10px;
+  white-space: pre-line;
+  max-width: calc(100vw - 42px);
+  z-index: 2;
+}
+#notify:empty {
+  display: none;
+}
