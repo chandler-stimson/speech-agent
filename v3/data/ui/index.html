@@ -32,7 +32,90 @@
         </g>
       </svg>
     </button>
-    <select id="lang" title="Set the language of the current speech recognition">
+    <select id="lang" title="Set the language of the current speech recognition&#013;&#013;Use Ctrl + J or Command + J to select the previous language&#013;Use Ctrl + K or Command + K to select the next language&#013;Use Ctrl + F or Command + F to find a language">
+      <optgroup label="Frequently Used" id="freq">
+      </optgroup>
+      <optgroup label="Other Languages">
+        <option value="af">Afrikaans - af</option>
+        <option value="eu">Basque - eu</option>
+        <option value="bg">Bulgarian - bg</option>
+        <option value="ca">Catalan - ca</option>
+        <option value="ar-EG">Arabic (Egypt) - ar-EG</option>
+        <option value="ar-JO">Arabic (Jordan) - ar-JO</option>
+        <option value="ar-KW">Arabic (Kuwait) - ar-KW</option>
+        <option value="ar-LB">Arabic (Lebanon) - ar-LB</option>
+        <option value="ar-QA">Arabic (Qatar) - ar-QA</option>
+        <option value="ar-AE">Arabic (UAE) - ar-AE</option>
+        <option value="ar-MA">Arabic (Morocco) - ar-MA</option>
+        <option value="ar-IQ">Arabic (Iraq) - ar-IQ</option>
+        <option value="ar-DZ">Arabic (Algeria) - ar-DZ</option>
+        <option value="ar-BH">Arabic (Bahrain) - ar-BH</option>
+        <option value="ar-LY">Arabic (Lybia) - ar-LY</option>
+        <option value="ar-OM">Arabic (Oman) - ar-OM</option>
+        <option value="ar-SA">Arabic (Saudi Arabia) - ar-SA</option>
+        <option value="ar-TN">Arabic (Tunisia) - ar-TN</option>
+        <option value="ar-YE">Arabic (Yemen) - ar-YE</option>
+        <option value="cs">Czech - cs</option>
+        <option value="nl-NL">Dutch - nl-NL</option>
+        <option value="en-AU">English (Australia) - en-AU</option>
+        <option value="en-CA">English (Canada) - en-CA</option>
+        <option value="en-IN">English (India) - en-IN</option>
+        <option value="en-NZ">English (New Zealand) - en-NZ</option>
+        <option value="en-ZA">English (South Africa) - en-ZA</option>
+        <option value="en-GB">English (UK) - en-GB</option>
+        <option value="en-US">English (US) - en-US</option>
+        <option value="fi">Finnish - fi</option>
+        <option value="fr-FR">French - fr-FR</option>
+        <option value="gl">Galician - gl</option>
+        <option value="de-DE">German - de-DE</option>
+        <option value="he">Hebrew - he</option>
+        <option value="hu">Hungarian - hu</option>
+        <option value="is">Icelandic - is</option>
+        <option value="it-IT">Italian - it-IT</option>
+        <option value="id">Indonesian - id</option>
+        <option value="ja">Japanese - ja</option>
+        <option value="ko">Korean - ko</option>
+        <option value="la">Latin - la</option>
+        <option value="zh-CN">Mandarin Chinese - zh-CN</option>
+        <option value="zh-TW">Traditional Taiwan - zh-TW</option>
+        <option value="zh-HK">Simplified Hong Kong - zh-HK</option>
+        <option value="zh-yue">Yue Chinese (Traditional Hong Kong) - zh-yue</option>
+        <option value="ms-MY">Malaysian - ms-MY</option>
+        <option value="no-NO">Norwegian - no-NO</option>
+        <option value="fa">Persian - fa</option>
+        <option value="pl">Polish - pl</option>
+        <option value="pt-PT">Portuguese - pt-PT</option>
+        <option value="pt-BR">Portuguese (brasil) - pt-BR</option>
+        <option value="ro-RO">Romanian - ro-RO</option>
+        <option value="ru">Russian - ru</option>
+        <option value="sr-SP">Serbian - sr-SP</option>
+        <option value="sk">Slovak - sk</option>
+        <option value="es-AR">Spanish (Argentina) - es-AR</option>
+        <option value="es-BO">Spanish (Bolivia) - es-BO</option>
+        <option value="es-CL">Spanish (Chile) - es-CL</option>
+        <option value="es-CO">Spanish (Colombia) - es-CO</option>
+        <option value="es-CR">Spanish (Costa Rica) - es-CR</option>
+        <option value="es-DO">Spanish (Dominican Republic) - es-DO</option>
+        <option value="es-EC">Spanish (Ecuador) - es-EC</option>
+        <option value="es-SV">Spanish (El Salvador) - es-SV</option>
+        <option value="es-GT">Spanish (Guatemala) - es-GT</option>
+        <option value="es-HN">Spanish (Honduras) - es-HN</option>
+        <option value="es-MX">Spanish (Mexico) - es-MX</option>
+        <option value="es-NI">Spanish (Nicaragua) - es-NI</option>
+        <option value="es-PA">Spanish (Panama) - es-PA</option>
+        <option value="es-PY">Spanish (Paraguay) - es-PY</option>
+        <option value="es-PE">Spanish (Peru) - es-PE</option>
+        <option value="es-PR">Spanish (Puerto Rico) - es-PR</option>
+        <option value="es-ES">Spanish (Spain) - es-ES</option>
+        <option value="es-US">Spanish (US) - es-US</option>
+        <option value="es-UY">Spanish(Uruguay) - es-UY</option>
+        <option value="es-VE">Spanish(Venezuela) - es-VE</option>
+        <option value="sv-SE">Swedish - sv-SE</option>
+        <option value="tr">Turkish - tr</option>
+        <option value="zu">Zulu - zu</option>
+      </optgroup>
+    </select>
+    <datalist id="list">
       <option value="af">Afrikaans - af</option>
       <option value="eu">Basque - eu</option>
       <option value="bg">Bulgarian - bg</option>
@@ -59,8 +142,8 @@
       <option value="en-IN">English (India) - en-IN</option>
       <option value="en-NZ">English (New Zealand) - en-NZ</option>
       <option value="en-ZA">English (South Africa) - en-ZA</option>
-      <option value="en-GB">English(UK) - en-GB</option>
-      <option value="en-US">English(US) - en-US</option>
+      <option value="en-GB">English (UK) - en-GB</option>
+      <option value="en-US">English (US) - en-US</option>
       <option value="fi">Finnish - fi</option>
       <option value="fr-FR">French - fr-FR</option>
       <option value="gl">Galician - gl</option>
@@ -81,7 +164,6 @@
       <option value="no-NO">Norwegian - no-NO</option>
       <option value="fa">Persian - fa</option>
       <option value="pl">Polish - pl</option>
-      <option value="xx-piglatin">Pig Latin - xx-piglatin</option>
       <option value="pt-PT">Portuguese - pt-PT</option>
       <option value="pt-BR">Portuguese (brasil) - pt-BR</option>
       <option value="ro-RO">Romanian - ro-RO</option>
@@ -89,29 +171,30 @@
       <option value="sr-SP">Serbian - sr-SP</option>
       <option value="sk">Slovak - sk</option>
       <option value="es-AR">Spanish (Argentina) - es-AR</option>
-      <option value="es-BO">Spanish(Bolivia) - es-BO</option>
-      <option value="es-CL">Spanish( Chile) - es-CL</option>
+      <option value="es-BO">Spanish (Bolivia) - es-BO</option>
+      <option value="es-CL">Spanish (Chile) - es-CL</option>
       <option value="es-CO">Spanish (Colombia) - es-CO</option>
-      <option value="es-CR">Spanish(Costa Rica) - es-CR</option>
-      <option value="es-DO">Spanish(Dominican Republic) - es-DO</option>
-      <option value="es-EC">Spanish(Ecuador) - es-EC</option>
-      <option value="es-SV">Spanish(El Salvador) - es-SV</option>
-      <option value="es-GT">Spanish(Guatemala) - es-GT</option>
-      <option value="es-HN">Spanish(Honduras) - es-HN</option>
-      <option value="es-MX">Spanish(Mexico) - es-MX</option>
-      <option value="es-NI">Spanish(Nicaragua) - es-NI</option>
-      <option value="es-PA">Spanish(Panama) - es-PA</option>
-      <option value="es-PY">Spanish(Paraguay) - es-PY</option>
-      <option value="es-PE">Spanish(Peru) - es-PE</option>
-      <option value="es-PR">Spanish(Puerto Rico) - es-PR</option>
-      <option value="es-ES">Spanish(Spain) - es-ES</option>
-      <option value="es-US">Spanish(US) - es-US</option>
+      <option value="es-CR">Spanish (Costa Rica) - es-CR</option>
+      <option value="es-DO">Spanish (Dominican Republic) - es-DO</option>
+      <option value="es-EC">Spanish (Ecuador) - es-EC</option>
+      <option value="es-SV">Spanish (El Salvador) - es-SV</option>
+      <option value="es-GT">Spanish (Guatemala) - es-GT</option>
+      <option value="es-HN">Spanish (Honduras) - es-HN</option>
+      <option value="es-MX">Spanish (Mexico) - es-MX</option>
+      <option value="es-NI">Spanish (Nicaragua) - es-NI</option>
+      <option value="es-PA">Spanish (Panama) - es-PA</option>
+      <option value="es-PY">Spanish (Paraguay) - es-PY</option>
+      <option value="es-PE">Spanish (Peru) - es-PE</option>
+      <option value="es-PR">Spanish (Puerto Rico) - es-PR</option>
+      <option value="es-ES">Spanish (Spain) - es-ES</option>
+      <option value="es-US">Spanish (US) - es-US</option>
       <option value="es-UY">Spanish(Uruguay) - es-UY</option>
       <option value="es-VE">Spanish(Venezuela) - es-VE</option>
       <option value="sv-SE">Swedish - sv-SE</option>
       <option value="tr">Turkish - tr</option>
       <option value="zu">Zulu - zu</option>
-    </select>
+    </datalist>
+    <input type="search" id="search" placeholder="Search Language" title="Find a language (Ctrl + F or Command + F). Press Enter to select it" list="list">
     <select id="alt" title="Set the maximum number of alternatives provided per recognition">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -124,5 +207,6 @@
   <div id="notify"></div>
 
   <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="keyboard.js"></script>
 </body>
 </html>

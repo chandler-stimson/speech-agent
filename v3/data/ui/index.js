@@ -72,11 +72,19 @@ class SSR {
 
 chrome.storage.local.get({
   language: navigator.language,
+  languages: ['en-US'],
   maxAlternatives: 2,
   interimResults: true
 }, prefs => {
   document.getElementById('lang').value = prefs.language;
   document.getElementById('alt').value = prefs.maxAlternatives;
+
+  for (const s of prefs.languages) {
+    const e = document.querySelector(`#lang [value="${s}"]`);
+    if (e) {
+      document.getElementById('freq').appendChild(e);
+    }
+  }
 
   const s = new SSR(prefs.language, prefs.maxAlternatives, prefs.interimResults);
 
@@ -182,9 +190,12 @@ document.getElementById('copy').addEventListener('click', () => {
   }
 });
 
-document.getElementById('lang').onchange = e => chrome.storage.local.set({
-  language: e.target.value
-}, () => location.reload());
+document.getElementById('lang').onchange = e => chrome.storage.local.get({
+  languages: ['en-US']
+}, prefs => chrome.storage.local.set({
+  language: e.target.value,
+  languages: [e.target.value, ...prefs.languages].filter((s, i, l) => s && l.indexOf(s) === i).slice(0, 6)
+}, () => location.reload()));
 
 document.getElementById('alt').onchange = e => chrome.storage.local.set({
   maxAlternatives: e.target.value

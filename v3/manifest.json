@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "SpeechAgent - Live Voice Typing",
   "description": "Speech to text converter to fill active text area with your voice using the built-in speech recognition engine of your browser",
   "permissions": [
